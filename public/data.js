@@ -1,11 +1,3 @@
-function print_filter(filter) {
-    var f=eval(filter);
-    if (typeof(f.length) != "undefined") {}else{}
-    if (typeof(f.top) != "undefined") {f=f.top(Infinity);}else{}
-    if (typeof(f.dimension) != "undefined") {f=f.dimension(function(d) { return "";}).top(Infinity);}else{}
-    console.log(filter+"("+f.length+") = "+JSON.stringify(f).replace("[","[\n\t").replace(/}\,/g,"},\n\t").replace("]","\n]"));
-      }
-      
   var data = [
 {team:'AA', date: '1/05', area:'NO', order:'0000000011', product:'1kg Blueberry Muesli', price:5.26, quantity:1835, value:9652.1},
 {team:'AA', date: '1/05', area:'NO', order:'0000000011', product:'1kg Nut Muesli', price:4.61, quantity:1695, value:7813.95},
@@ -1553,8 +1545,3 @@ function print_filter(filter) {
 {team:'GG', date: '3/20', area:'WE', order:'0000000539', product:'1kg Raisin Muesli', price:5, quantity:1969, value:9845},
 {team:'GG', date: '3/20', area:'WE', order:'0000000539', product:'500g Blueberry Muesli', price:5.75, quantity:1607, value:9240.25}
 ];
-
-      var facts = crossfilter(data);  //creates access to the Crossfilter functions
-      
-      console.log(facts);   //displays facts as a set of objects
-      print_filter('facts');  //displays facts as a set of data
